@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
-# Plate
+# Plater
 # -----
 # Easily create a starter file template for different project
 # -----
-# https://github.com/aquadzn/plate
+# https://github.com/aquadzn/plater
 # William Jacques
 # -----
 # Licensed under MIT License
