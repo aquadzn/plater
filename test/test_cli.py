@@ -24,6 +24,7 @@ def test_one_template():
 
     assert os.path.isfile('README.md')
 
+
 def test_three_templates():
     args = argparse.Namespace(template=['dockerfile', 'dockerignore', 'mit_license'], filename=None)
     plater.generate_template(args)
@@ -42,4 +43,3 @@ def test_modified_two_templates():
 
     assert os.path.isfile('home.html')
     assert not os.path.isfile('index.html')
-    
