@@ -65,8 +65,8 @@ def main():
     """
     # https://github.com/twintproject/twint/blob/master/twint/cli.py#L293
     version = ".".join(str(v) for v in sys.version_info[:2])
-    if float(version) < 3:
-        print("Plater requires Python version 3+")
+    if float(version) < 3.6:
+        print("Plater requires Python version 3.6+")
         sys.exit(0)
 
     functions_list = [x.__name__ for x in templates.__dict__.values()

@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="plater",
-    version="0.2",
+    version="0.3",
     author="William Jacques",
     author_email="williamjcqs8@gmail.com",
     description="Easily create a starter file template for different project",
@@ -22,5 +22,5 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires='>=3',
+    python_requires='>=3.6',
 )
