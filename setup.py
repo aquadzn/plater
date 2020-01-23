@@ -15,7 +15,7 @@ setuptools.setup(
     url="https://github.com/aquadzn/plater",
     packages=setuptools.find_packages(),
     entry_points={
-        'console_scripts': ['plater = plater.plater:main']
+        'console_scripts': ['plater = plater.cli:main']
     },
     classifiers=[
         "Programming Language :: Python :: 3",

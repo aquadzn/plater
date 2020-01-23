@@ -12,7 +12,6 @@
 # plater.py
 # -----
 
-import sys
 import argparse
 import inspect
 
@@ -59,16 +58,10 @@ def generate_template(args):
                 DICT.get(i, lambda: 'Invalid function!')()
 
 
-def main():
+def get_args():
     """
-    Main function.
+    Returns the CLI arguments.
     """
-    # https://github.com/twintproject/twint/blob/master/twint/cli.py#L293
-    version = ".".join(str(v) for v in sys.version_info[:2])
-    if float(version) < 3.6:
-        print("Plater requires Python version 3.6+")
-        sys.exit(0)
-
     functions_list = [x.__name__ for x in templates.__dict__.values()
                       if inspect.isfunction(x)]
 
@@ -93,5 +86,4 @@ def main():
         help="Select custom filename. Must be as long as template argument."
     )
 
-    args = parser.parse_args()
-    generate_template(args=args)
+    return parser.parse_args()
