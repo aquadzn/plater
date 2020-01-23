@@ -19,13 +19,13 @@ from plater import plater
 
 
 def test_one_template():
-    args = argparse.Namespace(template='readme')
+    args = argparse.Namespace(template='readme', filename=None)
     plater.generate_template(args)
 
     assert os.path.isfile('README.md')
 
 def test_three_templates():
-    args = argparse.Namespace(template=['dockerfile', 'dockerignore', 'mit_license'])
+    args = argparse.Namespace(template=['dockerfile', 'dockerignore', 'mit_license'], filename=None)
     plater.generate_template(args)
 
     assert os.path.isfile('Dockerfile')
